@@ -19,27 +19,37 @@
     <main class="main-designs" id="app">
         <!--First card-->
         <section class="designs-card" >
+            <!--Here start the card-->
             <div class="card-food">
+                <!--Card images with all object above the original image-->
                 <div class="food-image">
+                    <!--Image-->
                     <span class="image-image--food" @mouseover="handleMouseover" @mouseleave="handleMouseout" />
+                    <!--Image over the photo when the hover event (mouseover) is active-->
                     <span :style="styleImage" class="image-image--hover" >
                         <b>Milanesa de pollo apanado + arroz + papa francesa + ensalada + bebida personal</b>
                     </span>
+                    <!--Sale object-->
                     <div class="image-sale--food">
+                        <!--Rounded part with an image into it-->
                         <div class="sale-image">
                             <span class="image-image--sale"></span>
                         </div>
+                        <!--Rectangle with the discount value-->
                         <span class="sale-rectangle">&nbsp &nbsp &nbsp 25%dcto</span>
                     </div>
                 </div>
+                <!--Product title-->
                 <div class="food-title">
                     <h2 class="title-title--food"><b>MILANESA DE POLLO + BEBIDA PERSONAL</b></h2>
                 </div>
+                <!--Product description-->
                 <div class="food-desc" >
                     <p class="desc-sentence--food" :style="styleDesc">Milanesa de pollo apanado + arroz + papa francesa + ensalada + bebida personal</p>
                 </div>
+                <!--Product price (before price, after price and buy button)-->
                 <div class="food-sale">
-                    <p class="sale-price--food"><small style="color: crimson; font-size:11px;">Antes <del>$35.000</del></small>&nbsp|&nbsp<b>Ahora $22.950&nbsp</b></p>
+                    <p class="sale-price--food"><small style="color: crimson; font-size:11px;">Antes <del>$32.950</del></small>&nbsp|&nbsp<b>Ahora $22.950&nbsp</b></p>
                     <button class="sale-button--food"><b>Pedir</b></button>
                 </div>
             </div>
@@ -47,29 +57,43 @@
 
     </main>
 </body>
+
+<!-- Vue.js -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!-- Vue logic -->
 <script>
+    // Description: This script is used to change the style of the elements when the mouse is over the image.
+
+    // Import Vue
     const { createApp } = Vue;
     
+    // Create Vue app
     const app = createApp({
         data() {
             return {
+                // Style of the image
                 styleImage: "display: none;",
+                // Style of the description
                 styleDesc: "display: block;",
             }
         },
         methods: {
+            // Function to change the style of the elements when the mouse is over the image
             handleMouseover() {
+                // Change the style of the elements, the image is displayed and the description is hidden when the mouse is over the image
                 this.styleImage = "display: block;";
                 this.styleDesc = "display: none;";
             },
+            // Function to change the style of the elements when the mouse is out of the image
             handleMouseout() {
+                // Change the style of the elements, the image is hidden and the description is displayed when the mouse is out of the image
                 this.styleImage = "display: none;";
                 this.styleDesc = "display: block;";
             }
         }
     });
 
+    // Mount Vue app
     app.mount('#app');
 
 </script>

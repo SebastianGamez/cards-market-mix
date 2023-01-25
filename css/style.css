@@ -1,3 +1,6 @@
+/*Description: This is the main style of all project*/
+
+/*Variables*/
 :root{
     --raleway: 'Raleway', sans-serif;
     --real-black: #00020c;
@@ -5,6 +8,7 @@
     --real-white: #fafafa;
 }
 
+/*General settings*/
 *{
     box-sizing: border-box;
     font-family: var(--raleway);
@@ -12,6 +16,7 @@
     margin: 0;
 }
 
+/*Project settings*/
 .main-designs{
     background-color: rgb(216, 216, 216);
     color: var(--real-black);
@@ -22,6 +27,7 @@
     width: 100%;
 }
 
+/*Here start the card style*/
 .card-food{
     align-items: center;
     background-color: white;
@@ -33,6 +39,7 @@
     width: 320px;
 }
 
+/*Image container style*/
 .food-image{
     align-items: center;
     display: flex;
@@ -42,6 +49,7 @@
     width: 100%;
 }
 
+/*Original image style*/
 .image-image--food{
     background-image: url('../assets/images/chicken.png');
     background-position: center;
@@ -53,6 +61,19 @@
     transition: 0.3s;
 }
 
+/*Image style when hover*/
+.image-image--hover{
+    background-color: rgba(180, 0, 0, 0.555);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    color: var(--real-white);
+    text-align: center;
+    padding: 30% 10%;
+    transition: 0.3s;
+}
+/*Invisible container to set the absolute position of the images above the original image*/
 .image-sale--food{
     border-radius: 30px;
     height: 100%;
@@ -60,6 +81,8 @@
     width: 100%;
     overflow: hidden;
 }
+
+/*Circle container to the front part of the discount image above the original image*/
 .sale-image{
     position: absolute;
     height: 30px;
@@ -73,6 +96,8 @@
     border-radius: 50%;
     z-index: 1;
 }
+
+/*Discount image into the circle container mentioned before*/
 .image-image--sale{
     height: 32px;
     width: 32px;
@@ -83,6 +108,7 @@
     background-repeat: no-repeat;
 }
 
+/*Rectangle container to the front part of the discount image above the original image*/
 .sale-rectangle{
     background-color: var(--real-red);
     position: absolute;
@@ -96,6 +122,7 @@
     border-radius: 10px;
 }
 
+/*Title product container style*/
 .food-title{
     background-color: var(--real-red);
     color: var(--real-white);
@@ -105,19 +132,26 @@
     top: 260px;
     width: 90%;
 }
+
+/*Title product*/
 .title-title--food{
     font-size: 0.7rem;
     font-weight: black;
     padding: 10px;
 }
+/*Description product container style*/
 .food-desc{
     padding: 20px 0px 8px;
     width: 90%;
 }
+
+/*Description product*/
 .desc-sentence--food{
     font-size: 0.8rem;
     transition: 0.3s;
 }
+
+/*Price container style*/
 .food-sale{
     display: flex;
     flex-direction: row;
@@ -126,10 +160,14 @@
     width: 90%;
     margin-bottom: 20px;
 }
+
+/*Price*/
 .sale-price--food{
     font-size: 0.9rem;
     color: var(--real-black);
 }
+
+/*Button to buy the product*/
 .sale-button--food{
     background-color: var(--real-red);
     font-size: 0.9rem;
@@ -140,19 +178,9 @@
     height: 30px;
     transition: 0.3s;
 }
+
+/*Hover effect to the last button*/
 .sale-button--food:hover{
     background-color: rgb(172, 1, 1);
     cursor: pointer;
-}
-
-.image-image--hover{
-    background-color: rgba(180, 0, 0, 0.555);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    border-radius: 10px;
-    color: var(--real-white);
-    text-align: center;
-    padding: 30% 10%;
-    transition: 0.3s;
 }
