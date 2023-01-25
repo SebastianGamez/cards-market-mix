@@ -16,12 +16,15 @@
 </head>
 <body>
     <!-- Content -->
-    <main class="main-designs">
+    <main class="main-designs" id="app">
         <!--First card-->
         <section class="designs-card" >
             <div class="card-food">
                 <div class="food-image">
-                    <span class="image-image--food" />
+                    <span class="image-image--food" @mouseover="handleMouseover" @mouseleave="handleMouseout" />
+                    <span :style="styleImage" class="image-image--hover" >
+                        <b>Milanesa de pollo apanado + arroz + papa francesa + ensalada + bebida personal</b>
+                    </span>
                     <div class="image-sale--food">
                         <div class="sale-image">
                             <span class="image-image--sale"></span>
@@ -32,8 +35,8 @@
                 <div class="food-title">
                     <h2 class="title-title--food"><b>MILANESA DE POLLO + BEBIDA PERSONAL</b></h2>
                 </div>
-                <div class="food-desc">
-                    <p class="desc-sentence--food">Milanesa de pollo apanado + arroz + papa francesa + ensalada + bebida personal</p>
+                <div class="food-desc" >
+                    <p class="desc-sentence--food" :style="styleDesc">Milanesa de pollo apanado + arroz + papa francesa + ensalada + bebida personal</p>
                 </div>
                 <div class="food-sale">
                     <p class="sale-price--food"><small style="color: crimson; font-size:11px;">Antes <del>$35.000</del></small>&nbsp|&nbsp<b>Ahora $22.950&nbsp</b></p>
@@ -44,4 +47,30 @@
 
     </main>
 </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue;
+    
+    const app = createApp({
+        data() {
+            return {
+                styleImage: "display: none;",
+                styleDesc: "display: block;",
+            }
+        },
+        methods: {
+            handleMouseover() {
+                this.styleImage = "display: block;";
+                this.styleDesc = "display: none;";
+            },
+            handleMouseout() {
+                this.styleImage = "display: none;";
+                this.styleDesc = "display: block;";
+            }
+        }
+    });
+
+    app.mount('#app');
+
+</script>
 </html>

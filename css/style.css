@@ -50,6 +50,7 @@
     border-radius: 10px;
     height: 100%;
     width: 100%;
+    transition: 0.3s;
 }
 
 .image-sale--food{
@@ -115,6 +116,7 @@
 }
 .desc-sentence--food{
     font-size: 0.8rem;
+    transition: 0.3s;
 }
 .food-sale{
     display: flex;
@@ -143,3 +145,14 @@
     cursor: pointer;
 }
 
+.image-image--hover{
+    background-color: rgba(180, 0, 0, 0.555);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    color: var(--real-white);
+    text-align: center;
+    padding: 30% 10%;
+    transition: 0.3s;
+}
