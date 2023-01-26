@@ -19,6 +19,7 @@
 /*Project settings*/
 .main-designs{
     background-color: rgb(216, 216, 216);
+    flex-direction: row;
     color: var(--real-black);
     display: flex;
     justify-content: center;

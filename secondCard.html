@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/secondCard.css">
+    <!-- Title -->
+    <title>Maquetaciones-MarketMix</title>
+</head>
+<body>
+    <!-- Content -->
+    <main class="main-designs" id="app">
+        
+        <!--Second card-->
+        <section class="card-food--2">
+            <div class="food-image">
+                <!--Image-->
+                <span class="image-image--food" />
+                <!--Sale object-->
+                <div class="image-sale--food">
+                    <!--Rounded part with an image into it-->
+                    <div class="sale-image">
+                        <span class="image-image--sale"></span>
+                    </div>
+                    <!--Rectangle with the discount value-->
+                    <span class="sale-rectangle">&nbsp &nbsp &nbsp 25%dcto</span>
+                </div>
+            </div>
+            <div class="food-info">
+                <div class="info-title">
+                    <h2 class="title-title--food-2">CARNE ASADA</h2>
+                </div>
+                <div class="info-desc">
+                    <p class="desc-sentence--food-2">Carne asada + arroz + papa francesa + ensalada + bebida personal</p>
+                </div>
+                <div class="info-sale">
+                    <p class="info-price--food-2"><small style="font-size:16px;color: black">Antes <del>$32.950</del></small>&nbsp|&nbsp<b style="color:crimson">Ahora $22.950&nbsp</b></p>
+                </div>
+                <div class="info-custom--food-2">
+                    <select class="custom-input--food-2">
+                        <option disabled selected>Deseas incluir cubiertos? (Oblogatorio)*</option>
+                        <option value="true">SI</option>
+                        <option value="false">No</option>
+                    </select>
+                    <select class="custom-input--food-2">
+                        <option disabled selected>Elige la bebida de tu combo? (Oblogatorio)*</option>
+                        <option value="cocacola">CocaCola</option>
+                        <option value="pesi">Pepsi</option>
+                    </select>
+                </div>
+                <div class="info-note">
+                    <textarea class="note-note--info" placeholder="Observaciones"></textarea>
+                </div>
+                <div class="info-order">
+                    <div class="order-amount">
+                        <button class="amount-button--food-2" @click="subtract" >-</button>
+                        <input type="text" class="amount-input--food-2" v-model="amount">
+                        <button class="amount-button--food-2" @click="add">+</button>
+                    </div>
+                    <div class="order-button">
+                        <button class="button-order--food-2"><b>Agregar</b></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+<!-- Vue.js -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!-- Vue logic -->
+<script>
+
+    // Import Vue
+    const { createApp } = Vue;
+    
+    // Create Vue app
+    const app = createApp({
+        data() {
+            return {
+                amount: 1,
+                comment: '',
+                cutlery: '',
+                drink: ''
+            }
+        },
+        methods: {
+            // This method adds 1 to the amount
+            add() {
+                ++this.amount;
+            },
+            // This method subtracts 1 to the amount
+            subtract() {
+                if (this.amount > 1) {
+                    --this.amount;
+                }
+            }
+        }
+    });
+
+    // Mount Vue app
+    app.mount('#app');
+
+</script>
+</html>
