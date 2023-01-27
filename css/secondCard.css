@@ -39,6 +39,7 @@
     padding: 10px;
 }
 
+/*Image container style*/
 .food-image{
     display: flex;
     justify-content: center;
@@ -49,6 +50,7 @@
     border-radius: 10px;
 }
 
+/*Original image style*/
 .image-image--food{
     background-image: url('../assets/images/roast.jpeg');
     width: 100%;
@@ -107,7 +109,7 @@
     font-weight: bold;
     border-radius: 10px;
 }
-
+ /*Info food container*/ 
 .food-info{
     display: flex;
     height: max-content;
@@ -118,6 +120,7 @@
     width: 430px;
 }
 
+/*Title container*/
 .info-title{
     background-color: var(--real-red);
     border-radius: 10px;
@@ -132,11 +135,13 @@
     margin: 5px 0px;
 }
 
+/*Description container*/
 .info-desc{
     width: 90%;
     font-size: 1.1rem;
 }
 
+/*Price container*/
 .info-sale{
     width: 90%;
     font-size: 1.6rem;
@@ -144,10 +149,12 @@
     margin: 5px 0px 8px;
 }
 
+/*Container with the food options*/
 .info-custom--food-2{
     width: 90%;
 }
 
+/*Container with the selects (Drinks, cutlery)*/
 .custom-input--food-2{
     margin: 2px 0px;
     color: var(--real-red);
@@ -158,10 +165,12 @@
     font-weight: bold;
 }
 
+/*Container with the textarea*/
 .info-note{
     width: 90%;
 }
 
+/*Input to the notes (textarea)*/
 .note-note--info{
     margin: 10px 0px;
     padding: 5px;
@@ -174,6 +183,7 @@
     border: 1px solid black;
 }
 
+/*Container with the order button*/
 .info-order{
     width: 90%;
     display: flex;
@@ -181,6 +191,7 @@
     align-items: center;
 }
 
+/*Button add or subtract the product*/
 .order-amount{
     border: 2px solid rgb(145, 3, 3);
     border-radius: 10px;
@@ -193,6 +204,7 @@
     height: 50px;
 }
 
+/*Amount to buy*/
 .amount-button--food-2{
     width: 30%;
     height: 100%;
@@ -203,6 +215,7 @@
     font-weight: black;
     background-color: var(--real-white);
 }
+
 .amount-input--food-2{
     width: 40%;
     height: 100%;
@@ -213,12 +226,15 @@
     font-weight: black;
     text-align: center;
 }
+
+/*Button to buy container*/
 .order-button{
     width: 55%;
     height: 50px;
     display: flex;
 }
 
+/*Button to buy*/
 .button-order--food-2{
     width: 100%;
     height: 100%;
@@ -231,6 +247,7 @@
     cursor: pointer;
 }
 
+/*Button to buy hover*/
 .button-order--food-2:hover{
     background-color: rgb(145, 3, 3);
 }
